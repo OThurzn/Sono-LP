@@ -14,7 +14,6 @@
             text-align: center;
         }
 
-        /* rtl:begin:ignore */
         .marketing .col-lg-4 p {
             margin-right: .75rem;
             margin-left: .75rem;
@@ -27,16 +26,40 @@
             font-weight: 400;
             font-style: normal;
         }
+
+        .high-contrast {
+            background-color: #000 !important;
+            color: yellow !important;
+            font-weight: bolder;
+        }
+
+        .high-contrast div {
+            color: yellow !important;
+        }
+
+        .high-contrast h3 {
+            color: yellow !important;
+        }
+
+        .high-contrast #link {
+            color: yellow !important;
+        }
+
+        .high-contrast img {
+            filter: brightness(0.8) contrast(1.2);
+        }
     </style>
 </head>
 
 <body class="anton-font">
-    <header class="bg-primary d-flex justify-content-center p-2 sticky-top">
+    <header class="bg-primary d-flex justify-content-between align-items-center p-2 sticky-top">
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="#sono" class="text-white nav-link">O SONO</a></li>
             <li class="nav-item"><a href="#importancia" class="text-white nav-link">IMPORTÂNCIA</a></li>
             <li class="nav-item"><a href="#higiene" class="text-white nav-link">HIGIENE</a></li>
         </ul>
+        <!-- Botão de alto contraste -->
+        <button id="contrastBtn" class="btn btn-warning ms-2">Alto Contraste</button>
     </header>
 
     <div id="banner" class="carousel slide" data-bs-ride="carousel">
@@ -312,17 +335,16 @@
             </div>
         </div>
     </div>
-    <footer class="bg-body-tertiary text-center text-lg-start">
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-          © 2024 Copyright:
-          <a class="text-body" href="https://github.com/OThurzn/">Arthur C. Thomas</a>
+
+    <footer class="text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: #111; color: white;">
+            © 2024 Copyright:
+            <a class="text-center p-3" id="link" style="background-color: #111; color: white;" href="https://github.com/OThurzn/">Arthur Coelho Thomas</a>
         </div>
-        <!-- Copyright -->
-      </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script/script.js"></script>
 </body>
 
 </html>
